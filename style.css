@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Verlightgrayishblue: hsl(210, 60%, 98%);
+  --Lightgrayishblue1: hsl(211, 68%, 94%);
+  --Lightgrayishblue2: hsl(205, 33%, 90%);
+  --Grayishblue: hsl(219, 14%, 63%);
+  --Darkgrayishblue: hsl(219, 12%, 42%);
+  --Verydarkblue: hsl(224, 21%, 14%);
+
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+}
+
+body {
+  background-color: var(--Verlightgrayishblue);
+  width: 100%;
+  padding: 2rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-wrapper {
+  padding: 2rem;
+  background-color: var(--White);
+  border-radius: 15px;
+  width: 850px;
+  box-shadow: 0px 0px 50px 0px hsla(205, 33%, 90%, 0.586);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: 800;
+  color: var(--Verydarkblue);
+}
+
+h1 > span {
+  background: var(--Blue);
+  padding: 3px 10px;
+  font-size: 0.68em;
+  border-radius: 10px;
+  color: var(--White);
+  margin-left: 10px;
+}
+
+.mark-as-read {
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--Darkgrayishblue);
+  font-weight: 500;
+}
+
+.mark-as-read:hover {
+  color: var(--Blue);
+}
+
+.notification {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.wrap {
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.unread {
+  background-color: var(--Verlightgrayishblue);
+}
+
+.profile-pic {
+  width: 50px;
+  align-self: flex-start;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.msg {
+  font-weight: 500;
+  color: var(--Darkgrayishblue);
+  font-size: 1.08em;
+}
+
+.user-name {
+  margin-right: 5px;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--Verydarkblue);
+  cursor: pointer;
+}
+
+.post {
+  margin-left: 5px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--Darkgrayishblue);
+  cursor: pointer;
+}
+.user-name:hover,
+.post:hover {
+  color: var(--Blue);
+}
+
+.time {
+  color: var(--Grayishblue);
+  font-weight: 500;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 5px;
+  background-color: var(--Red);
+  margin-bottom: 2px;
+}
+
+.private-msg {
+  color: var(--Darkgrayishblue);
+  font-weight: 500;
+  padding: 20px;
+  border: 1px solid var(--Lightgrayishblue1);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.private-msg:hover {
+  background-color: var(--Lightgrayishblue1);
+}
+
+.smith-comment {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+}
+
+.pic {
+  width: 50px;
+  height: 50px;
+}
+
+.pic:hover {
+  outline: 3px solid var(--Lightgrayishblue1);
+  border-radius: 8px;
+  outline-offset: 2px;
+}
+
+.comment {
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .msg {
+    font-size: 0.95em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+  .notification-wrapper {
+    padding: 1rem;
+  }
+
+  .pic {
+    width: 40px;
+    height: 40px;
+  }
+  h1 {
+    font-size: 1.35em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .wrap {
+    padding: 10px;
+  }
+  .profile-pic {
+    width: 40px;
+  }
+}
